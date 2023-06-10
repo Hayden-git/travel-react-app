@@ -5,8 +5,6 @@ import SearchBar from "./components/SearchBar/SearchBar";
 import List from "./components/List/List";
 import Map from "./components/Map/Map";
 
-
-
 export default  function App() {
   return (
     <>
