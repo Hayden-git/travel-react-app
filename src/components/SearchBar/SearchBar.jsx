@@ -29,7 +29,7 @@ export default function SearchBar() {
             component='div'
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            Travel App
+            Nomads
           </Typography>
 
           {/* <Autocomplete> */}
