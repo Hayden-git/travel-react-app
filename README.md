@@ -28,7 +28,7 @@ Screenshots
 
 <!-- Add Screenshot 1 -->
 <!-- Add Screenshot 2 -->
-<!-- Add Contributing -->s
+<!-- Add Contributing -->
 
 If you have any questions, suggestions, or issues, please feel free to contact us at hayden.garry99@gmail.com
 
