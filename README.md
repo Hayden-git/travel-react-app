@@ -19,7 +19,7 @@ Installation
 
 To use the Travel Companion App, follow these steps:
 
-    Clone the repository: git clone https://github.com/Hayden-git/travel-react-apps
+    Clone the repository: git clone https://github.com/Hayden-git/travel-react-app.git
     Install the required dependencies: npm install
     Start the application: npm start
 
