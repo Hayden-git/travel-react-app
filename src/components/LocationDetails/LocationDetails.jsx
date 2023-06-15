@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function LocationDetails() {
+export default function LocationDetails({ place }) {
   return (
     <div>
-      <h1>Location Details</h1>
+      <h1>{place.name}</h1>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import GoogleMapReact from 'google-map-react';
 import { MapContainer, StyledMap, MarkerContainer, Pointer } from './styles';
 
 export default function Map() {
-  const coordinates = { lat: 39.0392, lng: 125.7625 };
+  const coordinates = { lat: 40.71427, lng: -74.00597 };
 
   return (
     <MapContainer>
@@ -27,4 +27,3 @@ export default function Map() {
   );
 }
 
- 
