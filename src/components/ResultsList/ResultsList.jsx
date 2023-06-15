@@ -6,22 +6,9 @@ import { ListContainer, MarginBottom, List, Loading, StyledFormControl, SelectEm
 
 import LocationDetails from '../LocationDetails/LocationDetails';
 
-export default function ResultsList() {
+// The { places } props takes the location name detail from the API and 
+export default function ResultsList( { places } ) {
   const [locationType, setLocationType] = useState();
-
-  const places = [
-    {name: 'Cool Place to Eat'},
-    {name: 'Some dum hotel'},
-    {name: 'Tourist Attraction Place'},
-    {name: 'Cool Place to Eat'},
-    {name: 'Some dum hotel'},
-    {name: 'Tourist Attraction Place'},
-    {name: 'Cool Place to Eat'},
-    {name: 'Some dum hotel'},
-    {name: 'Tourist Attraction Place'}
-  ];
-  
-
 
   return (
     <ListContainer>
@@ -30,8 +17,8 @@ export default function ResultsList() {
         <InputLabel>Type</InputLabel>
         <Select placeholder='Restaurants' value={locationType} onChange={(event) => setLocationType(event.target.value)}>
           <MenuItem value='Restaurants'>Restaurants</MenuItem>
-          <MenuItem value='Hotels'>Hotels</MenuItem>
-          <MenuItem value='Attractions'>Attractions</MenuItem>
+          {/* <MenuItem value='Hotels'>Hotels</MenuItem>
+          <MenuItem value='Attractions'>Attractions</MenuItem> */}
         </Select>
       </StyledFormControl>
 
@@ -48,10 +35,3 @@ export default function ResultsList() {
     </ListContainer>
   )
 }
-
-
-/*
-          {places.map((place) => (
-            <p>{place.name}</p>
-          ))}
-*/

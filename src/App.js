@@ -8,16 +8,22 @@ import ResultsList from './components/ResultsList/ResultsList';
 import Map from './components/Map/Map';
 
 export default function App() {
-  // const [fetchedData, setFetchedData] = useState([]);
-  const [place, setPlace] = useState([]);
+  const [places, setPlaces] = useState([]);
+
+  const [coordinates, setCoordinates] = useState({ lat: 37.808299, lng: -122.409521 });
+  const [mapBounds, setMapBounds] = useState({});
 
   useEffect(() => {
-    fetchPlacesData()
+      // mapBounds.sw gets the API data for the LAT + LONG for the Bottom-Left corner
+      // mapBounds.ne gets the API data for the LAt + LONG for the Top-Right corner
+    if(mapBounds) {}
+    fetchPlacesData(mapBounds.sw, mapBounds.ne)
+    // console.log(coordinates, mapBounds)
       .then((data) => {
         console.log(data);
-        setPlace(data);
+        setPlaces(data);
       });
-  }, []);
+  }, [coordinates, mapBounds]);
 
 
   return (
@@ -28,40 +34,16 @@ export default function App() {
       <Grid container spacing={3} style={{ display: 'flex', flexDirection: 'row' }}>
         {/* styling for display accessibility */}
         <Grid item xs={12} md={4}>
-          <ResultsList />
+          <ResultsList places={places} />
         </Grid>
         <Grid item xs={12} md={8}>
-          <Map />
+          <Map
+            setCoordinates={setCoordinates}
+            setMapBounds={setMapBounds}
+            coordinates={coordinates}
+          />
         </Grid>
       </Grid>
     </>
   );
 }
-
-
-// import React from 'react';
-// import { CssBaseline, Grid } from '@mui/material';
-
-
-// import SearchBar from './components/SearchBar/SearchBar';
-// import ResultsList from './components/ResultsList/ResultsList';
-// import Map from './components/Map/Map';
-
-// export default  function App() {
-//   return (
-//     <>
-//       <CssBaseline />
-//       <SearchBar />
-      
-//       <Grid container spacing={3} style={{ display: 'flex',  flexDirection: 'row' }}>
-//         {/* styling for display assessibility */}
-//         <Grid item xs={12} md={4}>
-//           <ResultsList />
-//         </Grid>
-//         <Grid item xs={12} md={8}>
-//           <Map />
-//         </Grid>
-//       </Grid>
-//     </>
-//   );
-// }
