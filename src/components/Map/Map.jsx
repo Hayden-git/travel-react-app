@@ -25,8 +25,9 @@ export default function Map({setCoordinates, setMapBounds, coordinates}) {
           defaultZoom={14}
           margin={[50, 50, 50, 50]}
           onChildClick={''}
-          options={{ disableDefaultUI: true, zoomControl: true, styles: mapStyles }}
+          options={{ styles: mapStyles }}
         >
+          
           <MarkerContainer>
             <Pointer>Marker</Pointer>
           </MarkerContainer>

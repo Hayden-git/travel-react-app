@@ -9,7 +9,6 @@ import Map from './components/Map/Map';
 
 export default function App() {
   const [places, setPlaces] = useState([]);
-
   const [coordinates, setCoordinates] = useState({ lat: 32.7495, lng: -117.2470 });
   const [mapBounds, setMapBounds] = useState({});
 
