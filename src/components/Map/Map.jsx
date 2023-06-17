@@ -10,7 +10,8 @@ export default function Map({setCoordinates, setMapBounds, coordinates}) {
     <MapContainer>
       <StyledMap>
         <GoogleMapReact
-        /* When coords or bounds of map change, google-map-react reads the onChange() callback function 
+        /* 
+        When coords or bounds of map change, google-map-react reads the onChange() callback function 
           that takes an event target with a call to setCoodinates set to an object... setCoordinates({ lat: event.center.lat, lng: event.center.lng }) ...
           Then it also sets the top right and bottom left corner by setting the MapBounds whenever the event target fires inside the onChange ... 
         */

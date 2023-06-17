@@ -24,12 +24,10 @@ export default function App() {
       });
   }, [coordinates, mapBounds]);
 
-
   return (
     <>
       <CssBaseline />
       <SearchBar />
-
       <Grid container spacing={3} style={{ display: 'flex', flexDirection: 'row' }}>
         {/* styling for display accessibility */}
         <Grid item xs={12} md={4}>
